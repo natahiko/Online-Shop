@@ -123,7 +123,7 @@ function printCategoriesGoods() {
         if(goodsList[i].special_price!=null){
             res+= "<a href='#' onclick='showDetails("+goodsList[i].id+")' class='price sale'>"+goodsList[i].special_price+"<span class='sp'>"+goodsList[i].price+"</span></a>";
         } else{
-            res+= "<a class='price'>"+goodsList[i].price+"</a>";
+            res+= "<a onclick='showDetails("+goodsList[i].id+")' class='price'>"+goodsList[i].price+"</a>";
         }
         res+="</div>";
     }
@@ -234,9 +234,10 @@ function addAmountOfGoodDet(a, n){
                         alert("Ми не отптовий магазин, тому ви не можете купити так багато(((");
                     }
                 }
-                else
-                    c = (Number(arcok[i].charAt(2)) - 1);
-                if (c != 0) res += a + "[" + c + "]!";
+                else {
+                    if(c!=0) c = (Number(arcok[i].charAt(2)) - 1);
+                }
+                if (c >= 0) res += a + "[" + c + "]!";
             }
         }
         if(bool){
