@@ -1,3 +1,124 @@
+@font-face {
+    font-family: Xarrovv;
+    src: url(../../Files/12517.otf);
+}
+*{
+    font-family: "Xarrovv",sans-serif;
+}
+#aboutShop{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+.btn-default{
+    background: url("../../Images/addBacket.png");
+    background-repeat: no-repeat;
+    float: right;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 1px;
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    border: 3px solid transparent;
+    transition: 0.7s;
+}
+.ordered{
+    border: 3px solid transparent;
+    background-color: rgba(32, 140, 21, 0.81);
+}
+h1{
+    font-family: "Xarrovv",sans-serif;
+    font-weight: bolder;
+    margin: 0;
+}
+.startingText{
+    position: absolute;
+    top: 50%;
+    left:15%;
+    height:40%;
+    width:70%;
+    border: 2px solid white;
+    color: white;
+    font-family: "Helvetica",sans-serif;
+    font-weight: bold;
+}
+.startingText h1{
+    position:absolute;
+    top:10%;
+    font-size:5vw;
+    left:10%;
+}
+.startingText button{
+    position:absolute;
+    top:50%;
+    left:75%;
+    width:35%;
+    font-size:2vw;
+}
+.container {
+    position: relative;
+}
+.container img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.loadingImg{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.loadingImg img{
+    object-fit: contain;
+}
+.loadingText{
+    clear: both;
+    font-size: 45px;
+}
+.backIcon{
+    float: left;
+    margin: 20px;
+    width: 90px;
+    height: 40px;
+    z-index: 400;
+    position: relative;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.backIcon:hover{
+    transform: scale(0.96);
+    opacity: 60%;
+    padding: 5px;
+    border-radius: 20px;
+}
+.mainBacket{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.mainBacket:hover{
+    transform: scale(0.95);
+    opacity: 80%;
+}
+.emptyBacket{
+    display: block;
+    width: 80%;
+    align-items: center;
+    font-size: xx-large;
+    margin: 30px auto;
+    text-align: center;
+    color: #88959a;
+    font-family: "Arial Black",sans-serif;
+}
+.emptyBacket img{
+
+    cursor: pointer;
+    display: block;
+    margin: 5px  auto;
+}
 @media (max-width: 1000px) {
 
     .oneProduct {
@@ -8,6 +129,24 @@
     }
 }
 @media (max-width: 750px) {
+    .loadingText{
+        display: none;
+        color: white;
+    }
+    #productInformation img{
+        width: 95%;
+        clear: both;
+    }#productInformation .short{
+
+         clear: both;
+     }
+    #backetPage .return {
+        display: none;
+    }
+    #backetPage .total{
+        clear: both;
+        width: 98%;
+    }
     .mainBacket{
         margin-right: 50px;
     }

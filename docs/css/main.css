@@ -12,7 +12,7 @@
     float: left; }
   #header h1 {
     font-size: 42px;
-    font-family: "Arial Black";
+    font-family: "Arial Black",sans-serif;
     float: left;
     color: #000;
     text-decoration: none;
@@ -37,7 +37,7 @@
   height: 40px;
   background-color: #e2e1de;
   position: fixed;
-  font-family: "Xarrovv";
+  font-family: "Xarrovv",sans-serif;
   left: 0;
   bottom: 0;
   border-top: 2px solid black;
@@ -106,7 +106,7 @@
   font-size: 22px; }
 
 .category a {
-  font-family: "Arial";
+  font-family: "Arial",sans-serif;
   font-weight: bold;
   color: #000;
   font-size: 22px;
@@ -210,7 +210,7 @@
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     filter: brightness(115%) contrast(115%); }
   #productInformation p {
-    font-family: "Xarrovv";
+    font-family: "Xarrovv",sans-serif;
     font-size: large;
     font-weight: lighter;
     color: #88959a;
@@ -224,7 +224,7 @@
     color: #6b4327;
     text-decoration-color: #d2b29a;
     text-decoration: none;
-    font-family: "Arial Black";
+    font-family: "Arial Black",sans-serif;
     font-size: 34px; }
   #productInformation .price::after {
     content: ' $';
@@ -233,7 +233,7 @@
     color: #000; }
   #productInformation h4 {
     font-size: 46px;
-    font-family: "Arial Black"; }
+    font-family: "Arial Black",sans-serif; }
   #productInformation .descDiv {
     font-size: 28px;
     width: 85%;
@@ -242,7 +242,7 @@
     clear: both; }
     #productInformation .descDiv .desc {
       font-size: 26px;
-      font-family: "Arial";
+      font-family: "Arial",sans-serif;
       color: #000; }
 
 #backetPage {
@@ -291,7 +291,7 @@
     font-weight: lighter;
     display: block;
     width: 55%;
-    font-family: Arial;
+    font-family: "Arial",sans-serif;
     color: #88959a;
     text-align: center;
     margin: 70px auto;
@@ -328,7 +328,7 @@
       opacity: 80%;
       border-radius: 10px;
       font-weight: bold;
-      font-family: "Arial Black";
+      font-family: "Arial Black",sans-serif;
       margin-right: 5%; }
     #backetPage .total .btn {
       clear: both;

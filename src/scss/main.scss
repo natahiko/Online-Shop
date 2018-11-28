@@ -22,7 +22,7 @@ $widthCategory: 190px;
   }
   h1{
     font-size: 42px;
-    font-family: "Arial Black";
+    font-family: "Arial Black",sans-serif;
     float: left;
     color: #000;
     text-decoration: none;
@@ -50,7 +50,7 @@ $widthCategory: 190px;
   height: $footerHeight;
   background-color: $lightGray;
   position: fixed;
-  font-family: "Xarrovv";
+  font-family: "Xarrovv",sans-serif;
   left: 0;
   bottom: 0;
   border-top: 2px solid black;
@@ -119,7 +119,7 @@ $widthCategory: 190px;
   font-size: 22px;
 }
 .category a{
-  font-family: "Arial";
+  font-family: "Arial",sans-serif;
   font-weight: bold;
   color: #000;
   font-size: 22px;
@@ -235,7 +235,7 @@ $widthCategory: 190px;
     filter: brightness(115%) contrast(115%);
   }
   p{
-    font-family: "Xarrovv";
+    font-family: "Xarrovv",sans-serif;
     font-size: large;
     font-weight: lighter;
     color: $gray;
@@ -251,8 +251,7 @@ $widthCategory: 190px;
     color: $brown;
     text-decoration-color: $lightBrown;
     text-decoration: none;
-    text-shadow: 3px 3px solid $lightBrown;
-    font-family: "Arial Black";
+    font-family: "Arial Black",sans-serif;
     font-size: 34px;
   }
   .price::after{
@@ -263,7 +262,7 @@ $widthCategory: 190px;
   }
   h4{
     font-size: 46px;
-    font-family: "Arial Black";
+    font-family: "Arial Black",sans-serif;
   }
   .descDiv{
     font-size: 28px;
@@ -273,7 +272,7 @@ $widthCategory: 190px;
     clear: both;
     .desc{
       font-size: 26px;
-      font-family: "Arial";
+      font-family: "Arial",sans-serif;
       color: #000;
     }
   }
@@ -334,7 +333,7 @@ $widthCategory: 190px;
     font-weight: lighter;
     display: block;
     width: 55%;
-    font-family: Arial;
+    font-family: "Arial",sans-serif;
     color: $gray;
     text-align: center;
     margin: 70px auto;
@@ -375,7 +374,7 @@ $widthCategory: 190px;
       opacity: 80%;
       border-radius: 10px;
       font-weight: bold;
-      font-family: "Arial Black";
+      font-family: "Arial Black",sans-serif;
       margin-right: 5%;
     }
     .btn{
