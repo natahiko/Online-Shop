@@ -28,7 +28,7 @@ function makeGreenGoodsFromBacket() {
     }
 }
 function dowloadGoods(a) {
-    a = a + +"1";
+    a = a;
     var u = 'http://nit.tron.net.ua/api/product/list/category/'+a;
     $.ajax({
         url: u
@@ -154,7 +154,7 @@ function showAllProducts() {
     var res = "<ul class='nav'>";
     res+= "<span onclick='makeActiveAll()' id='helpSpanAll' class='active'>All Progucts</span>";
     for(var i=0; i<category.length; i++){
-        res+= "<span onclick='makeActive("+i+")' id='helpSpan"+i+"'><a href='#' class='bande' data-toggle='popover' title='" +
+        res+= "<span onclick='makeActive("+category[i].id+")' id='helpSpan"+category[i].id+"'><a href='#' class='bande' data-toggle='popover' title='" +
             category[i].name+"' data-content='"+category[i].description+"'>&#8658;</a>"+category[i].name+"</span>";
     }
     res+="</ul>";
