@@ -310,7 +310,7 @@ function orderGoods() {
                 document.getElementById("orderTel").value = "";
                 document.getElementById("orderGmail").value = "";
                 navFunction("aboutShop");
-                alert(res);
+                alert("Вітаю, ви успішно зробили замовлення в MyShop!!!");
             })
             .fail(function() {
             alert( "З вашим замовленням виникли проблеми з невідомих причин" );
