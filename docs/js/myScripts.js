@@ -116,7 +116,7 @@ function printCategoriesGoods() {
     for(var i=0; i<goodsList.length; i++){
         res+="<div class='oneProduct'>";
         res+="<a href='#' onclick='showDetails("+goodsList[i].id+")'><div  class='obj'><img src='"+goodsList[i].image_url+"' width='100px'></div>";
-        res +="</a><input style='background-image: url("+"../Images/addBacket.png"+")' type='button' id='addBacketShort"+goodsList[i].id+"' onclick='addToBacket("+goodsList[i].id+")' value=' ' class='btn btn-default'>";
+        res +="</a><input style='background-image: url("+"http://cdn.onlinewebfonts.com/svg/img_451795.png"+")' type='button' id='addBacketShort"+goodsList[i].id+"' onclick='addToBacket("+goodsList[i].id+")' value=' ' class='btn btn-default'>";
 
         res+="<a href='#' onclick='showDetails("+goodsList[i].id+")'><h3>"+goodsList[i].name+"</h3></a>";
 
