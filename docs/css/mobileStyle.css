@@ -1,0 +1,49 @@
+@media (max-width: 1000px) {
+
+    .oneProduct {
+        width: 45%;
+    }
+    .mainBacket{
+        margin-right: 50px;
+    }
+}
+@media (max-width: 750px) {
+    .mainBacket{
+        margin-right: 50px;
+    }
+    .category{
+        width: 100%;
+        text-align: center;
+        position: inherit;
+    }
+    .container img{
+        height: 200px;
+    }
+    #header{
+        height: 50px;
+    }
+    #header .mainLogo{
+        height: 40px;
+    }
+    #header h1 {
+        font-size: 30px;
+    }
+    #header .mainBacket{
+        height: 40px;
+        width: 55px;
+        margin-right: 20px;
+    }
+    #goodsList{
+        margin-left: 0;
+        left: 0;
+    }
+    .oneProduct img{
+        width: 60%;
+    }
+    .oneProduct {
+        width: 95%;
+    }
+    .category li{
+        float: left;
+    }
+}
