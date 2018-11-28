@@ -237,10 +237,10 @@ function addAmountOfGoodDet(a, n){
                 else {
                     if(c!=0) c = (Number(arcok[i].charAt(2)) - 1);
                 }
-                if (c >= 0) res += a + "[" + c + "]!";
+                if (c > 0) res += a + "[" + c + "]!";
             }
         }
-        if(bool){
+        if(bool && n==1){
             res += a+"[1]!";
             c = 1;
         }
