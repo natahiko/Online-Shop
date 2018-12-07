@@ -9,7 +9,7 @@ function navFunction(a) {
 var category;
 $(document).ready(function () {
     $.ajax({
-        url: 'http://nit.tron.net.ua/api/category/list'
+        url: 'https://nit.tron.net.ua/api/category/list'
     }).then(function (result) {
         category = result;
     });
@@ -29,7 +29,7 @@ function makeGreenGoodsFromBacket() {
 }
 function dowloadGoods(a) {
     a = a;
-    var u = 'http://nit.tron.net.ua/api/product/list/category/'+a;
+    var u = 'https://nit.tron.net.ua/api/product/list/category/'+a;
     $.ajax({
         url: u
     }).then(function (result) {
@@ -55,7 +55,7 @@ function printProductDetails(inf) {
 function showDetails(a) {
     var gif = "<div  class='loadingImg'><img src='https://pa1.narvii.com/6533/157e191525eb4532410ded637ec8f54076b23e44_hq.gif'><p class='loadingText'> loading...</p></div>";//TODO
     document.getElementById("productInformation").innerHTML = gif;
-    var link  = "http://nit.tron.net.ua/api/product/"+a;
+    var link  = "https://nit.tron.net.ua/api/product/"+a;
     navFunction("productDetails");
 
     $.ajax({
@@ -116,7 +116,7 @@ function printCategoriesGoods() {
     for(var i=0; i<goodsList.length; i++){
         res+="<div class='oneProduct'>";
         res+="<a href='#' onclick='showDetails("+goodsList[i].id+")'><div  class='obj'><img src='"+goodsList[i].image_url+"' width='100px'></div>";
-        res +="</a><input style='background-image: url("+"http://cdn.onlinewebfonts.com/svg/img_451795.png"+")' type='button' id='addBacketShort"+goodsList[i].id+"' onclick='addToBacket("+goodsList[i].id+")' value=' ' class='btn btn-default'>";
+        res +="</a><input style='background-image: url("+"https://cdn.onlinewebfonts.com/svg/img_451795.png"+")' type='button' id='addBacketShort"+goodsList[i].id+"' onclick='addToBacket("+goodsList[i].id+")' value=' ' class='btn btn-default'>";
 
         res+="<a href='#' onclick='showDetails("+goodsList[i].id+")'><h3>"+goodsList[i].name+"</h3></a>";
 
@@ -140,7 +140,7 @@ function makeActiveAll() {
     lastShownCategories = 0;
     $("span").removeClass("myActive");
     $("#helpSpanAll").addClass("myActive");
-        var u = 'http://nit.tron.net.ua/api/product/list';
+        var u = 'https://nit.tron.net.ua/api/product/list';
         $.ajax({
             url: u
         }).then(function (result) {
@@ -252,7 +252,7 @@ function addAmountOfGoodDet(a, n){
 
 function openFullBacket() {
     $.ajax({
-        url: 'http://nit.tron.net.ua/api/product/list'
+        url: 'https://nit.tron.net.ua/api/product/list'
     }).then(function (result) {
         var cok = document.cookie;
         var arcok = cok.split("!");
@@ -278,7 +278,7 @@ function openFullBacket() {
         }
         res+="<div class='inform'>Будьте уважні! Видаляючи товар з корзини в основному меню, ви видаляєте всі одиниці товару!!!</div>";
         res+="<div class='total'><span>Total: </span><span id='totalSum'>"+totalSumm()+"</span><div><button data-toggle='modal' data-target='#myModal' type='button' onclick='orderGoods()' class='btn btn-outline-warning'>Оформити замовлення</button></div></div>";
-        res+="<a class='return' href='#' onclick='showAllProducts()'><img alt src='http://www.jemome.com/cdn/2015/02/return-icon-orange_1280359.png'><p>Повернутись до покупок</p></a>";
+        res+="<a class='return' href='#' onclick='showAllProducts()'><img alt src='https://www.jemome.com/cdn/2015/02/return-icon-orange_1280359.png'><p>Повернутись до покупок</p></a>";
         navFunction("backetPage");
         document.getElementById("backetPage").innerHTML = res;
     })
@@ -302,7 +302,7 @@ function orderGoods() {
             res+= ar[i].charAt(0)+"["+ar[i].charAt(2)+"], ";
         }
         res+="}";
-        $.post( "http://nit.tron.net.ua/api/order/add", res)
+        $.post( "https://nit.tron.net.ua/api/order/add", res)
             .done(function( data ) {
                 document.cookie = "";
                 document.getElementById("orderName").value = "";
